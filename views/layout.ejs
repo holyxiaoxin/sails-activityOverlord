@@ -31,12 +31,29 @@
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/styles/vendor/bootstrap.css">
+    <link rel="stylesheet" href="/styles/vendor/custom.css">
     <!--STYLES END-->
   </head>
 
   <body>
+    <!--header-->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <a class="navbar-brand" href="/">activityOverlord</a>
+      </div>
+    </div>
     <%- body %>
-
+    <!--footer-->
+    <div class="container">
+      <hr>
+      <footer class="footer">
+        <div class="pull-right">
+          <section><span>brought to you by: </span><a href="http://sailsjs.com">sails.js</a></section>
+          <section><span>check me out at: </span><a href="http://about.me/jiarong">Jia Rong</a></section>
+          <section>credits: irl nathan</section>
+        </div>
+      </footer>
+    </div>
 
 
     <!--
@@ -61,7 +78,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -90,6 +107,7 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/vendor/jquery-2.1.1.min.js"></script>
     <script src="/js/vendor/bootstrap.js"></script>
     <!--SCRIPTS END-->
   </body>

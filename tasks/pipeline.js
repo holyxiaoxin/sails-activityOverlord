@@ -30,8 +30,8 @@ var jsFilesToInject = [
   'js/dependencies/**/*.js',
 
   //load jquery first
-  'js/vendor/jquery,js',
-  
+  'js/vendor/jquery-2.1.1.min.js',
+
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'
