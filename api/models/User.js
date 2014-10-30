@@ -7,6 +7,9 @@
 
 module.exports = {
 
+  //only save the below fields into the database
+  schema: true,
+
   attributes: {
 
     name: {
@@ -14,9 +17,7 @@ module.exports = {
       required:'true'
     },
 
-    title: {
-      type:'string',
-    },
+    title: 'string',
 
     email: {
       type:'string',
@@ -25,12 +26,19 @@ module.exports = {
       unique:'true'
     },
 
-    encryptedPassword: {
-      type:'string',
-      required:'true'
-    }
+    encryptedPassword: 'string'
+    //,
+    //
+    //toJSON: function(){
+    //  var obj = this.toObject();
+    //  delete obj.password;
+    //  delete obj.confirmation;
+    //  delete obj.encryptedPassword;
+    //  delete obj._csrf;
+    //  return obj;
+    //}
 
   }
-  
+
 };
 
