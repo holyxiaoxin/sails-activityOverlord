@@ -27,12 +27,18 @@ module.exports = {
         return res.redirect('/user/new');
       }
 
-      //  After successfully creating the user
-      //  redirect to the show action
-      res.json(user);
-      req.session.flash={};
-    });
+        //  After successfully creating the user
+        //  redirect to the show action
+        res.redirect('/user/show/'+user.id);
 
+    });
+  },
+
+  show: function(req, res) {
+    User.findOne(req.param('id'), function foundUser(err, user) {
+      if (err || !user) return res.serverError(err);
+      res.view({user: user});
+    });
   }
 
 };
